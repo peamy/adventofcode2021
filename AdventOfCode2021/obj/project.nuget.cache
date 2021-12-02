@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ectKfgjYPkak6GKDjh9Wp/Lo85BG3wpzPorV9QDk/Lha8p9CPgPiqwlXEdP9TWdoNeq7jJK5GWqLZKlvEWz0AQ==",
+  "success": true,
+  "projectFilePath": "D:\\Programming\\adventofcode\\adventofcode2021\\AdventOfCode2021\\AdventOfCode2021.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\remco\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
