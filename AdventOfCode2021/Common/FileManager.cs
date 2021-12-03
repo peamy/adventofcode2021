@@ -9,15 +9,16 @@ namespace AdventOfCode2021.Common
 {
     public class FileManager
     {
-        public static string p2dir = "D:\\Programming\\adventofcode\\adventofcode2021\\AdventOfCode2021\\Solutions\\2\\Data\\";
+        public static string basedir = "D:\\Programming\\adventofcode\\adventofcode2021\\AdventOfCode2021\\";
+
         public static string[] Load(string filepath)
         {
             return File.ReadAllLines(filepath);
         }
 
-        public static string[] LoadP2(string filepath)
+        public static string[] LoadPuzzle(string file, int puzzlenr)
         {
-            return File.ReadAllLines(p2dir + filepath);
+            return File.ReadAllLines($"{basedir}Solutions\\{puzzlenr}\\Data\\{file}");
         }
     }
 }
