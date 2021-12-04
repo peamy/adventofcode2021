@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2021.Solutions._3
 {
-    public class Puzzle3
+    public class Puzzle3 : Puzzle
     {
         public int SolvePart1(string[] input)
         {

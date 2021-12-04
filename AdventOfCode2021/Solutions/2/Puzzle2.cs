@@ -8,19 +8,19 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2021.Solutions
 {
-    public class Puzzle2
+    public class Puzzle2 : Puzzle
     {
-        public static int SolveForFile(string file)
+        public int SolveForFile(string file)
         {
             return SolvePart1(FileManager.Load(file));
         }
 
-        public static int SolvePart1(string[] input)
+        public int SolvePart1(string[] input)
         {
             return Solve(input, new Submarine());
         }
 
-        public static int SolvePart2(string[] input)
+        public int SolvePart2(string[] input)
         {
             return Solve(input, new SubmarinePart2());
         }
