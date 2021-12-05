@@ -2,6 +2,7 @@
 using AdventOfCode2021.Solutions;
 using AdventOfCode2021.Solutions._3;
 using AdventOfCode2021.Solutions._4;
+using AdventOfCode2021.Solutions._5;
 using System;
 
 namespace AdventOfCode2021
@@ -11,14 +12,13 @@ namespace AdventOfCode2021
         static void Main(string[] args)
         {
 
-            var puzzle2 = new Puzzle2();
-            SolvePuzzle(puzzle2, 2);
+            SolvePuzzle(new Puzzle2(), 2);
 
-            var puzzle3 = new Puzzle3();
-            SolvePuzzle(puzzle3, 3);
+            SolvePuzzle(new Puzzle3(), 3);
 
-            var puzzle4 = new Puzzle4();
-            SolvePuzzle(puzzle4, 4);
+            SolvePuzzle(new Puzzle4(), 4);
+
+            SolvePuzzle(new Puzzle5(), 5);
         }
 
         private static void SolvePuzzle(Puzzle puzzle, int number)
