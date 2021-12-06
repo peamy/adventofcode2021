@@ -8,8 +8,8 @@ namespace AdventOfCode2021.Solutions
 {
     public interface Puzzle
     {
-        public int SolvePart1(string[] input);
+        public string SolvePart1(string[] input);
 
-        public int SolvePart2(string[] input);
+        public string SolvePart2(string[] input);
     }
 }

@@ -9,16 +9,16 @@ namespace AdventOfCode2021.Solutions._5
 {
     public class Puzzle5 : Puzzle
     {
-        public int SolvePart1(string[] input)
+        public string SolvePart1(string[] input)
         {
             var system = new CoordinateSystemRevamped(input);
-            return system.CountDangerZones();
+            return system.CountDangerZones().ToString();
         }
 
-        public int SolvePart2(string[] input)
+        public string SolvePart2(string[] input)
         {
             var system = new CoordinateSystemRevamped(input, true);
-            return system.CountDangerZones();
+            return system.CountDangerZones().ToString();
         }
     }
 }

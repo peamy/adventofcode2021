@@ -9,20 +9,20 @@ namespace AdventOfCode2021.Solutions._4
 {
     public class Puzzle4 : Puzzle
     {
-        public int SolvePart1(string[] input)
+        public string SolvePart1(string[] input)
         {
             BingoGame game = new BingoGame(input.ToList());
             var winner = game.PlayBingo();
 
-            return winner.GetScore();
+            return winner.GetScore().ToString();
         }
 
-        public int SolvePart2(string[] input)
+        public string SolvePart2(string[] input)
         {
             BingoGame game = new BingoGame(input.ToList());
             var lastwinner = game.PlayBingoTillLastOneWins();
 
-            return lastwinner.GetScore();
+            return lastwinner.GetScore().ToString();
         }
     }
 }

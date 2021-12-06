@@ -8,22 +8,22 @@ namespace AdventOfCode2021.Solutions._3
 {
     public class Puzzle3 : Puzzle
     {
-        public int SolvePart1(string[] input)
+        public string SolvePart1(string[] input)
         {
             var twoDarray = Make2dArray(input);
             string gamma = GetGamma(twoDarray);
             string epsilon = getEpsilon(gamma);
             int gammaInt = BinarystringToInt(gamma);
             int epsilonint = BinarystringToInt(epsilon);
-            return gammaInt * epsilonint;
+            return (gammaInt * epsilonint).ToString();
         }
 
-        public int SolvePart2(string[] input)
+        public string SolvePart2(string[] input)
         {
             var inputlist = input.ToList();
             int oxygen = BinarystringToInt(GetOxygen(inputlist));
             int co2 = BinarystringToInt(GetCO2(inputlist));
-            return oxygen * co2;
+            return (oxygen * co2).ToString();
         }
 
         public string GetOxygen(List<string> input)
