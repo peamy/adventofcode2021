@@ -20,36 +20,17 @@ namespace AdventOfCode2021.Solutions._9.Objects
             {
                 for (int j = 0; j < input[0].Length; j++)
                 {
-                    locations[i, j] = new Location() { Height = GetLocationValue(input, i, j) };                    
-                }
-            }
-            initNeigbours();
-        }        
-
-        // could be done in the function above, a bit more efficiently 
-        private void initNeigbours()
-        {
-            for (int i = 0; i < input.Length; i++)
-            {
-                for (int j = 0; j < input[0].Length; j++)
-                {
+                    locations[i, j] = new Location() { Height = GetLocationValue(input, i, j) };
                     if(i != 0)
                     {
                         locations[i, j].Neighbours.Add(locations[i - 1, j]);
+                        locations[i - 1, j].Neighbours.Add(locations[i, j]);
                     }
                     if(j != 0)
                     {
                         locations[i, j].Neighbours.Add(locations[i, j - 1]);
+                        locations[i, j - 1].Neighbours.Add(locations[i, j]);
                     }
-                    if(i < input.Length - 1)
-                    {
-                        locations[i, j].Neighbours.Add(locations[i + 1, j]);
-                    }
-                    if (j < input[0].Length - 1)
-                    {
-                        locations[i, j].Neighbours.Add(locations[i, j + 1]);
-                    }
-
                 }
             }
         }
