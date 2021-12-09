@@ -11,6 +11,7 @@ namespace AdventOfCode2021.Solutions._9.Objects
         public Location[,] locations;
         private List<Location> startLocations;
         private string[] input;
+
         public Field(string[] input)
         {
             this.input = input;

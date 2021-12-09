@@ -10,6 +10,7 @@ namespace AdventOfCode2021.Solutions._9.Objects
     {
         public List<Location> Neighbours = new List<Location>();
 
+        // only necessary for the root location
         private List<Location> Basin;
 
         public int Height;
