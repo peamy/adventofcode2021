@@ -9,7 +9,7 @@ namespace AdventOfCode2021.Common
 {
     public class FileManager
     {
-        public static string basedir = "D:\\Programming\\adventofcode\\adventofcode2021\\AdventOfCode2021\\";
+        public static string basedir = "..\\..\\..\\..\\AdventOfCode2021\\";
 
         public static string[] Load(string filepath)
         {
