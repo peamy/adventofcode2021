@@ -22,10 +22,11 @@ namespace AdventOfCode2021.Solutions._9.Objects
                     locations[i, j] = new Location() { Height = GetLocationValue(input, i, j) };                    
                 }
             }
-            addNeigbours();
+            initNeigbours();
         }        
 
-        private void addNeigbours()
+        // could be done in the function above, a bit more efficiently 
+        private void initNeigbours()
         {
             for (int i = 0; i < input.Length; i++)
             {
@@ -33,19 +34,19 @@ namespace AdventOfCode2021.Solutions._9.Objects
                 {
                     if(i != 0)
                     {
-                        locations[i, j].UpNeighbour = locations[i - 1, j];
+                        locations[i, j].Neighbours.Add(locations[i - 1, j]);
                     }
                     if(j != 0)
                     {
-                        locations[i, j].LeftNeigbour = locations[i, j - 1];
+                        locations[i, j].Neighbours.Add(locations[i, j - 1]);
                     }
                     if(i < input.Length - 1)
                     {
-                        locations[i, j].DownNeighbour = locations[i + 1, j];
+                        locations[i, j].Neighbours.Add(locations[i + 1, j]);
                     }
                     if (j < input[0].Length - 1)
                     {
-                        locations[i, j].RightNeighbour = locations[i, j + 1];
+                        locations[i, j].Neighbours.Add(locations[i, j + 1]);
                     }
 
                 }
@@ -60,6 +61,7 @@ namespace AdventOfCode2021.Solutions._9.Objects
             }
         }
 
+        // calculate the three biggest basins and add them together
         public int ThreeBiggestBasins()
         {
             FindBottoms();
@@ -75,6 +77,7 @@ namespace AdventOfCode2021.Solutions._9.Objects
             return biggest[0] * biggest[1] * biggest[2];
         }
 
+        // ugly code to keep a top 3 of numbers. Didn't want to bother with sorting algorythms
         public static int[] getBiggestThree(int input, int[] currentBiggest)
         {
             int smallest = currentBiggest[0];
@@ -94,6 +97,7 @@ namespace AdventOfCode2021.Solutions._9.Objects
             return currentBiggest;
         }
 
+        // calculates part 1 solution. Also creates a list of bottoms to be used in part 2
         public int FindBottoms()
         {
             startLocations = new List<Location>();
@@ -120,6 +124,7 @@ namespace AdventOfCode2021.Solutions._9.Objects
             return total;
         }
 
+        // get numeric value from input on specific location
         public static int GetLocationValue(string[] input, int y, int x)
         {
             if (x < 0 || y < 0 || x >= input[0].Length || y >= input.Length)

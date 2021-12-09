@@ -8,55 +8,35 @@ namespace AdventOfCode2021.Solutions._9.Objects
 {
     public class Location
     {
-        public Location UpNeighbour;
-        public Location DownNeighbour;
-        public Location LeftNeigbour;
-        public Location RightNeighbour;
+        public List<Location> Neighbours = new List<Location>();
 
         private List<Location> Basin;
 
         public int Height;
 
+        // only does this in the "root" location
         public void CreateBasin()
         {
             Basin = new List<Location>();
             Basin.Add(this);
-            if (UpNeighbour != null)
-                UpNeighbour.AddToBasin(Basin, this);
-            if (DownNeighbour != null)
-                DownNeighbour.AddToBasin(Basin, this);
-            if (LeftNeigbour != null)
-                LeftNeigbour.AddToBasin(Basin, this);
-            if (RightNeighbour != null)
-                RightNeighbour.AddToBasin(Basin, this);
+
+            for(int i = 0; i < Neighbours.Count; i++)
+                if(Neighbours[i] != null)
+                    Neighbours[i].AddToBasin(Basin, this);
         }
 
+        // if this location SHOULD be added, add it.
+        // Then TRY to add all the neighbours (they will check themself)
         public void AddToBasin(List<Location> basin, Location origin)
         {
-            if (Height == 9 || Height < origin.Height)
+            if (Height == 9 || Height < origin.Height || basin.Contains(this))
                 return;
-            if (!neighboursOk(origin))
-                return;
-            
-            if(!basin.Contains(this))
-                basin.Add(this);
-            infectNeigbour(basin, UpNeighbour, origin);
-            infectNeigbour(basin, DownNeighbour, origin);
-            infectNeigbour(basin, LeftNeigbour, origin);
-            infectNeigbour(basin, RightNeighbour, origin);
-        }
+                        
+            basin.Add(this);
 
-        private void infectNeigbour(List<Location> basin, Location neighbour, Location origin)
-        {
-            if(neighbour != null && !neighbour.Equals(origin))
-            {
-                neighbour.AddToBasin(basin, this);
-            }
-        }
-
-        private bool neighboursOk(Location origin)
-        {
-            return true;
+            for (int i = 0; i < Neighbours.Count; i++)
+                if (Neighbours[i] != null)
+                    Neighbours[i].AddToBasin(basin, this);
         }
 
         public int BasinSize()
