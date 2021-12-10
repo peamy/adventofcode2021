@@ -18,7 +18,7 @@ namespace AdventOfCode2021.Solutions._5.Tests
             Puzzle5 puzzle5 = new Puzzle5();
             var input = FileManager.LoadPuzzle("DemoInput.txt", 5);
             var result = puzzle5.SolvePart1(input);
-            Assert.AreEqual(5, result);
+            Assert.AreEqual("5", result);
         }
 
         [TestMethod()]
@@ -27,7 +27,7 @@ namespace AdventOfCode2021.Solutions._5.Tests
             Puzzle5 puzzle5 = new Puzzle5();
             var input = FileManager.LoadPuzzle("DemoInput.txt", 5);
             var result = puzzle5.SolvePart2(input);
-            Assert.AreEqual(12, result);
+            Assert.AreEqual("12", result);
         }
     }
 }

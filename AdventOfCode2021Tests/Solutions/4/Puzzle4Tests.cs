@@ -19,7 +19,7 @@ namespace AdventOfCode2021.Solutions._4.Tests
             var puzzle4 = new Puzzle4();
             var input = FileManager.LoadPuzzle("DemoInput.txt", 4);
             var result = puzzle4.SolvePart1(input);
-            Assert.AreEqual(4512, result);
+            Assert.AreEqual("4512", result);
         }
 
         [TestMethod()]
@@ -37,7 +37,7 @@ namespace AdventOfCode2021.Solutions._4.Tests
             var puzzle4 = new Puzzle4();
             var input = FileManager.LoadPuzzle("DemoInput.txt", 4);
             var result = puzzle4.SolvePart2(input);
-            Assert.AreEqual(1924, result);
+            Assert.AreEqual("1924", result);
         }
     }
 }

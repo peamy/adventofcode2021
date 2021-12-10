@@ -17,7 +17,7 @@ namespace AdventOfCode2021.Solutions.Tests
         {
             var puzzle2 = new Puzzle2();
             var result = puzzle2.SolvePart1(FileManager.Load("D:\\Programming\\adventofcode\\adventofcode2021\\AdventOfCode2021\\Solutions\\2\\Data\\DemoInput.txt"));
-            Assert.AreEqual(150, result);
+            Assert.AreEqual("150", result);
         }
 
         [TestMethod()]
@@ -25,7 +25,7 @@ namespace AdventOfCode2021.Solutions.Tests
         {
             var puzzle2 = new Puzzle2();
             var result = puzzle2.SolvePart2(FileManager.Load("D:\\Programming\\adventofcode\\adventofcode2021\\AdventOfCode2021\\Solutions\\2\\Data\\DemoInput.txt"));
-            Assert.AreEqual(900, result);
+            Assert.AreEqual("900", result);
         }
     }
 }

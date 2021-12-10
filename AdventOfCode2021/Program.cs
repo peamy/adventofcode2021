@@ -1,5 +1,6 @@
 ﻿using AdventOfCode2021.Common;
 using AdventOfCode2021.Solutions;
+using AdventOfCode2021.Solutions._10;
 using AdventOfCode2021.Solutions._3;
 using AdventOfCode2021.Solutions._4;
 using AdventOfCode2021.Solutions._5;
@@ -31,6 +32,8 @@ namespace AdventOfCode2021
             SolvePuzzle(new Puzzle8(), 8);
 
             SolvePuzzle(new Puzzle9(), 9);
+
+            SolvePuzzle(new Puzzle10(), 10);
 
         }
 

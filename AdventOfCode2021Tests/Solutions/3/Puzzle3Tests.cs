@@ -18,7 +18,7 @@ namespace AdventOfCode2021.Solutions._3.Tests
             var puzzle3 = new Puzzle3();
             var input = FileManager.LoadPuzzle("DemoInput.txt", 3);
             var result = puzzle3.SolvePart1(input);
-            Assert.AreEqual(198, result);
+            Assert.AreEqual("198", result);
         }
 
         [TestMethod()]
@@ -47,7 +47,7 @@ namespace AdventOfCode2021.Solutions._3.Tests
             var puzzle3 = new Puzzle3();
             var input = FileManager.LoadPuzzle("DemoInput.txt", 3);
             var result = puzzle3.SolvePart2(input);
-            Assert.AreEqual(230, result);
+            Assert.AreEqual("230", result);
         }
 
         [TestMethod()]
