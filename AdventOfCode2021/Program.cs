@@ -3,6 +3,19 @@ using AdventOfCode2021.Solutions;
 using AdventOfCode2021.Solutions._10;
 using AdventOfCode2021.Solutions._11;
 using AdventOfCode2021.Solutions._12;
+using AdventOfCode2021.Solutions._13;
+using AdventOfCode2021.Solutions._14;
+using AdventOfCode2021.Solutions._15;
+using AdventOfCode2021.Solutions._16;
+using AdventOfCode2021.Solutions._17;
+using AdventOfCode2021.Solutions._18;
+using AdventOfCode2021.Solutions._19;
+using AdventOfCode2021.Solutions._20;
+using AdventOfCode2021.Solutions._21;
+using AdventOfCode2021.Solutions._22;
+using AdventOfCode2021.Solutions._23;
+using AdventOfCode2021.Solutions._24;
+using AdventOfCode2021.Solutions._25;
 using AdventOfCode2021.Solutions._3;
 using AdventOfCode2021.Solutions._4;
 using AdventOfCode2021.Solutions._5;
@@ -18,7 +31,6 @@ namespace AdventOfCode2021
     {
         static void Main(string[] args)
         {
-
             //SolvePuzzle(new Puzzle2(), 2);
 
             //SolvePuzzle(new Puzzle3(), 3);
@@ -40,6 +52,32 @@ namespace AdventOfCode2021
             //SolvePuzzle(new Puzzle11(), 11);
 
             SolvePuzzle(new Puzzle12(), 12);
+
+            //SolvePuzzle(new Puzzle13(), 13);
+
+            //SolvePuzzle(new Puzzle14(), 14);
+
+            //SolvePuzzle(new Puzzle15(), 15);
+
+            //SolvePuzzle(new Puzzle16(), 16);
+
+            //SolvePuzzle(new Puzzle17(), 17);
+
+            //SolvePuzzle(new Puzzle18(), 18);
+
+            //SolvePuzzle(new Puzzle19(), 19);
+
+            //SolvePuzzle(new Puzzle20(), 20);
+
+            //SolvePuzzle(new Puzzle21(), 21);
+
+            //SolvePuzzle(new Puzzle22(), 22);
+
+            //SolvePuzzle(new Puzzle23(), 23);
+
+            //SolvePuzzle(new Puzzle24(), 24);
+
+            //SolvePuzzle(new Puzzle25(), 25);
 
         }
 
