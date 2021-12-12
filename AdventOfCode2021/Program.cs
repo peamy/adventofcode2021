@@ -2,6 +2,7 @@
 using AdventOfCode2021.Solutions;
 using AdventOfCode2021.Solutions._10;
 using AdventOfCode2021.Solutions._11;
+using AdventOfCode2021.Solutions._12;
 using AdventOfCode2021.Solutions._3;
 using AdventOfCode2021.Solutions._4;
 using AdventOfCode2021.Solutions._5;
@@ -18,25 +19,27 @@ namespace AdventOfCode2021
         static void Main(string[] args)
         {
 
-            SolvePuzzle(new Puzzle2(), 2);
+            //SolvePuzzle(new Puzzle2(), 2);
 
-            SolvePuzzle(new Puzzle3(), 3);
+            //SolvePuzzle(new Puzzle3(), 3);
 
-            SolvePuzzle(new Puzzle4(), 4);
+            //SolvePuzzle(new Puzzle4(), 4);
 
-            SolvePuzzle(new Puzzle5(), 5);
+            //SolvePuzzle(new Puzzle5(), 5);
 
-            SolvePuzzle(new Puzzle6(), 6);
+            //SolvePuzzle(new Puzzle6(), 6);
 
-            SolvePuzzle(new Puzzle7(), 7);
+            //SolvePuzzle(new Puzzle7(), 7);
 
-            SolvePuzzle(new Puzzle8(), 8);
+            //SolvePuzzle(new Puzzle8(), 8);
 
-            SolvePuzzle(new Puzzle9(), 9);
+            //SolvePuzzle(new Puzzle9(), 9);
 
-            SolvePuzzle(new Puzzle10(), 10);
+            //SolvePuzzle(new Puzzle10(), 10);
 
-            SolvePuzzle(new Puzzle11(), 11);
+            //SolvePuzzle(new Puzzle11(), 11);
+
+            SolvePuzzle(new Puzzle12(), 12);
 
         }
 
