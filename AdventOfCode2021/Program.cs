@@ -51,9 +51,9 @@ namespace AdventOfCode2021
 
             //SolvePuzzle(new Puzzle11(), 11);
 
-            SolvePuzzle(new Puzzle12(), 12);
+            //SolvePuzzle(new Puzzle12(), 12);
 
-            //SolvePuzzle(new Puzzle13(), 13);
+            SolvePuzzle(new Puzzle13(), 13);
 
             //SolvePuzzle(new Puzzle14(), 14);
 

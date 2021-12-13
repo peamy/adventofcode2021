@@ -18,7 +18,16 @@ namespace AdventOfCode2021.Solutions._13.Tests
             var input = FileManager.LoadPuzzle("DemoInput.txt", 13);
             var puzzle = new Puzzle13();
             var result = puzzle.SolvePart1(input);
-            Assert.AreEqual("-1", result);
+            Assert.AreEqual("17", result);
+        }
+
+        [TestMethod()]
+        public void SolvePart2Test()
+        {
+            var input = FileManager.LoadPuzzle("DemoInput.txt", 13);
+            var puzzle = new Puzzle13();
+            var result = puzzle.SolvePart2(input);
+            Assert.AreEqual("16", result);
         }
     }
 }
