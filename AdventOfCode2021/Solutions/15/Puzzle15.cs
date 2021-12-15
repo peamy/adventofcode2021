@@ -11,15 +11,15 @@ namespace AdventOfCode2021.Solutions._15
     {
         public string SolvePart1(string[] input)
         {
-            var (startNode, endNode) = LoadData(input);
-            PathCalculator pc = new PathCalculator(startNode, endNode);
+            var startNode = LoadData(input);
+            PathCalculator pc = new PathCalculator(startNode);
             return pc.CalculateShortestPath().ToString();
         }
 
         public string SolvePart2(string[] input)
         {
-            var (startNode, endNode) = LoadDataPt2(input);
-            PathCalculator pc = new PathCalculator(startNode, endNode);
+            var startNode = LoadDataPt2(input);
+            PathCalculator pc = new PathCalculator(startNode);
             return pc.CalculateShortestPath().ToString();
         }
 
@@ -35,11 +35,10 @@ namespace AdventOfCode2021.Solutions._15
         //    }
         //    return grid;
         //}
-        public (Node, Node) LoadData(string[] input)
+        public Node LoadData(string[] input)
         {
             Node[,] nodes = new Node[input.Length, input[0].Length];
             Node startNode = new Node();
-            Node endNode = new Node();
             for (int i = 0; i < input.Length; i++)
             {
                 for (int j = 0; j < input[0].Length; j++)
@@ -53,20 +52,18 @@ namespace AdventOfCode2021.Solutions._15
                     if (i == input.Length - 1 && j == input[0].Length - 1)
                     {
                         node.isEndNode = true;
-                        endNode = node;
                     }
                     nodes[i, j] = node;
                 }
             }
             setNeigbours(nodes);
-            return (startNode, endNode);
+            return startNode;
         }
 
-        public (Node, Node) LoadDataPt2(string[] input)
+        public Node LoadDataPt2(string[] input)
         {
             Node[,] nodes = new Node[(input.Length*5), (input[0].Length*5)];
             Node startNode = new Node();
-            Node endNode = new Node();
             for (int ii = 0; ii < 5; ii++)
             {
                 for (int i = 0; i < input.Length; i++)
@@ -84,7 +81,6 @@ namespace AdventOfCode2021.Solutions._15
                             if (i == input.Length - 1 && j == input[0].Length - 1 && ii == 4 && jj == 4)
                             {
                                 node.isEndNode = true;
-                                endNode = node;
                             }
                             nodes[(input.Length * ii) + i, (input[0].Length * jj) + j] = node;
                         }
@@ -92,7 +88,7 @@ namespace AdventOfCode2021.Solutions._15
                 }
             }
             setNeigbours(nodes);
-            return (startNode, endNode);
+            return startNode;
         }
 
         public int GetRiskLevel(string input, int ii, int jj)

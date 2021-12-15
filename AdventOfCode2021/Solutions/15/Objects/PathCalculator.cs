@@ -10,22 +10,31 @@ namespace AdventOfCode2021.Solutions._15.Objects
     public class PathCalculator
     {
         private Node startNode;
-        private Node endNode;
-        public PathCalculator(Node start, Node end)
+        public PathCalculator(Node start)
         {
             startNode = start;
-            endNode = end;
         }
 
         public int CalculateShortestPath()
         {
-            prioQueue.Add(startNode);
+            
             return calculateShortest();            
         }
 
-        public List<Node> prioQueue = new List<Node>();
+        /// <summary>
+        /// This function was inspired by the following website
+        /// https://www.codeproject.com/Articles/1221034/Pathfinding-Algorithms-in-Csharp
+        /// Using Dijkstra's shortest path algorithm
+        /// 
+        /// Fun fact, before using dijkstra I had already started a solution using a linkedlist of Nodes
+        /// However this solution was very inefficient and I killed the test after about 2 minutes.
+        /// That's when I looked up pathfinding algorithms (Dijkstra)
+        /// </summary>
+        /// <returns>The length of the shortest path, not the path itself</returns>
         private int calculateShortest()
         {
+            List<Node> prioQueue = new List<Node>();
+            prioQueue.Add(startNode);
             while (prioQueue.Any())
             {
                 prioQueue = prioQueue.OrderBy(x => x.ShortestToStart).ToList();
