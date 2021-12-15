@@ -14,12 +14,14 @@ namespace AdventOfCode2021.Solutions._15.Objects
         public int ShortestToStart = int.MaxValue;
         public bool isChecked = false;
 
-        public void SetShortestToStart(int shortest)
+        public bool SetShortestToStart(int shortest)
         {
             if(shortest < ShortestToStart)
             {
                 ShortestToStart = shortest;
+                return true;
             }
+            return false;
         }
     }
 }

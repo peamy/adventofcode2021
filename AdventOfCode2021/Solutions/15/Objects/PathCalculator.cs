@@ -21,18 +21,18 @@ namespace AdventOfCode2021.Solutions._15.Objects
         /// <returns>The length of the shortest path, not the path itself</returns>
         public static int CalculateShortestPath(Node startNode)
         {
-            List<Node> prioQueue = new List<Node>();
-            prioQueue.Add(startNode);
-            while (prioQueue.Any())
+            List<Node> nodesToCheck = new List<Node>();
+            nodesToCheck.Add(startNode);
+            while (nodesToCheck.Any())
             {
-                prioQueue = prioQueue.OrderBy(x => x.ShortestToStart).ToList();
-                var node = prioQueue.First();
-                prioQueue.Remove(node);
+                var shortest = nodesToCheck.Min(x => x.ShortestToStart);
+                var node = nodesToCheck.Where(x => x.ShortestToStart == shortest).First();
+                nodesToCheck.Remove(node);
                 foreach(var neigbour in node.NeighBours)
                 {                    
                     neigbour.SetShortestToStart(node.ShortestToStart + neigbour.RiskLevel);
-                    if(!prioQueue.Contains(neigbour) && !neigbour.isChecked)
-                        prioQueue.Add(neigbour);
+                    if(!nodesToCheck.Contains(neigbour) && !neigbour.isChecked)
+                        nodesToCheck.Add(neigbour);
                 }
                 node.isChecked = true;
                 if (node.isEndNode)
