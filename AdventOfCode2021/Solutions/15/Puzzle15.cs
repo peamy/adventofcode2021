@@ -12,15 +12,13 @@ namespace AdventOfCode2021.Solutions._15
         public string SolvePart1(string[] input)
         {
             var startNode = LoadData(input);
-            PathCalculator pc = new PathCalculator(startNode);
-            return pc.CalculateShortestPath().ToString();
+            return PathCalculator.CalculateShortestPath(startNode).ToString();
         }
 
         public string SolvePart2(string[] input)
         {
             var startNode = LoadDataPt2(input);
-            PathCalculator pc = new PathCalculator(startNode);
-            return pc.CalculateShortestPath().ToString();
+            return PathCalculator.CalculateShortestPath(startNode).ToString();
         }
 
         //private int[,] LoadData(string[] input)

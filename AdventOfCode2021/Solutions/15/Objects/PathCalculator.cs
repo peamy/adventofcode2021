@@ -9,18 +9,6 @@ namespace AdventOfCode2021.Solutions._15.Objects
 {
     public class PathCalculator
     {
-        private Node startNode;
-        public PathCalculator(Node start)
-        {
-            startNode = start;
-        }
-
-        public int CalculateShortestPath()
-        {
-            
-            return calculateShortest();            
-        }
-
         /// <summary>
         /// This function was inspired by the following website
         /// https://www.codeproject.com/Articles/1221034/Pathfinding-Algorithms-in-Csharp
@@ -31,7 +19,7 @@ namespace AdventOfCode2021.Solutions._15.Objects
         /// That's when I looked up pathfinding algorithms (Dijkstra)
         /// </summary>
         /// <returns>The length of the shortest path, not the path itself</returns>
-        private int calculateShortest()
+        public static int CalculateShortestPath(Node startNode)
         {
             List<Node> prioQueue = new List<Node>();
             prioQueue.Add(startNode);
