@@ -57,9 +57,9 @@ namespace AdventOfCode2021
 
             //SolvePuzzle(new Puzzle14(), 14);
 
-            SolvePuzzle(new Puzzle15(), 15);
+            //SolvePuzzle(new Puzzle15(), 15);
 
-            //SolvePuzzle(new Puzzle16(), 16);
+            SolvePuzzle(new Puzzle16(), 16);
 
             //SolvePuzzle(new Puzzle17(), 17);
 
@@ -83,8 +83,8 @@ namespace AdventOfCode2021
 
         private static void SolvePuzzle(Puzzle puzzle, int number)
         {
-            var result = puzzle.SolvePart1(FileManager.LoadPuzzle("Input.txt", number));
-            Console.WriteLine($"Puzzle {number}.1 result: {result}");
+            //var result = puzzle.SolvePart1(FileManager.LoadPuzzle("Input.txt", number));
+            //Console.WriteLine($"Puzzle {number}.1 result: {result}");
             var part2result = puzzle.SolvePart2(FileManager.LoadPuzzle("Input.txt", number));
             Console.WriteLine($"Puzzle {number}.2 result: {part2result}");
             Console.WriteLine($"");
